@@ -14,4 +14,4 @@ Just reference the resulting MvcMiniProfiler.Glimpse.dll in your Glimpse-enabled
 Support
 -------
 
-Just create an issue here on GitHub, send me a message or fork the project and send me a pull request.
+Create an issue here on GitHub, send me a message or fork the project and send me a pull request.

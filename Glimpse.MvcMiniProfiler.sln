@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMiniProfiler.Glimpse", "Glimpse.MvcMiniProfiler\MvcMiniProfiler.Glimpse.csproj", "{63CC657D-6235-402B-9EFC-07364E76FE72}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Glimpse.MvcMiniProfiler", "Glimpse.MvcMiniProfiler\Glimpse.MvcMiniProfiler.csproj", "{63CC657D-6235-402B-9EFC-07364E76FE72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

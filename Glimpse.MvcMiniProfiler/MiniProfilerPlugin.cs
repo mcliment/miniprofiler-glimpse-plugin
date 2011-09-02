@@ -1,14 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Web;
 using Glimpse.Core.Extensibility;
-using MvcMiniProfiler;
 
 namespace MvcMiniProfiler.Glimpse
 {
     [GlimpsePlugin()]
     public class MiniProfilerPlugin : IGlimpsePlugin
     {
-        public object GetData(HttpApplication application)
+        public object GetData(HttpContextBase application)
         {
             if (MiniProfiler.Current == null)
             {
@@ -17,10 +16,10 @@ namespace MvcMiniProfiler.Glimpse
 
             var profiler = MiniProfiler.Current;
 
-            return FormatTimings(new[] { profiler.Root }, profiler.DurationMilliseconds);
+            return FormatTimings(new[] {profiler.Root}, decimal.ToDouble(profiler.DurationMilliseconds));
         }
 
-        public void SetupInit(HttpApplication application)
+        public void SetupInit()
         {
             // Nothing
         }
@@ -50,7 +49,7 @@ namespace MvcMiniProfiler.Glimpse
                 result.Add(new object[]
                                {
                                    timing.Name,
-                                   FormatTimings(timing.Children, timing.DurationMilliseconds),
+                                   FormatTimings(timing.Children, timing.DurationMilliseconds.HasValue ? decimal.ToDouble(timing.DurationMilliseconds.Value) : (double?) null),
                                    string.Format("{0} ms", parentDuration),
                                    string.Format("T+{0} ms", timing.StartMilliseconds),
                                    FormatSqlTiming(timing.SqlTimings),

@@ -107,6 +107,10 @@ Details coming soon.
 
 Release Notes
 -------------
+11/18/2011 - 0.87
+- Bug fix for content duplication bug by dpen2000
+- Bug fix for blank content bug by jeffora
+
 11/01/2011 - 0.86
 - Added Timeline plugin
 - Added simplified support for redirected requests

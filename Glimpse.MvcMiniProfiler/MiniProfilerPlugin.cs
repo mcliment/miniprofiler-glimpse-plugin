@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web;
 using Glimpse.Core.Extensibility;
+using StackExchange.Profiling;
 
 namespace MvcMiniProfiler.Glimpse
 {

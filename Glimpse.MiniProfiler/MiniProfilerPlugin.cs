@@ -10,12 +10,12 @@ namespace Glimpse.MiniProfiler
     {
         public object GetData(HttpContextBase application)
         {
-            if (MiniProfiler.Current == null)
+            if (StackExchange.Profiling.MiniProfiler.Current == null)
             {
                 return null;
             }
 
-            var profiler = MiniProfiler.Current;
+            var profiler = StackExchange.Profiling.MiniProfiler.Current;
 
             return FormatTimings(new[] {profiler.Root}, decimal.ToDouble(profiler.DurationMilliseconds));
         }

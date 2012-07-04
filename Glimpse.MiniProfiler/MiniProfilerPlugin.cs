@@ -3,7 +3,7 @@ using System.Web;
 using Glimpse.Core.Extensibility;
 using StackExchange.Profiling;
 
-namespace MvcMiniProfiler.Glimpse
+namespace Glimpse.MiniProfiler
 {
     [GlimpsePlugin()]
     public class MiniProfilerPlugin : IGlimpsePlugin

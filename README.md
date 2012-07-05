@@ -1,4 +1,4 @@
-Mini-profiler Glimpse Plugin
+MiniProfiler Glimpse Plugin
 ============================
 
 Description
@@ -15,3 +15,8 @@ Support
 -------
 
 Create an issue here on GitHub, send me a message or fork the project and send me a pull request.
+
+Open Source License
+-------------------
+
+MiniProfiler Glimpse Plugin is free software distributed under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).

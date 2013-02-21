@@ -51,7 +51,7 @@ namespace Glimpse.MiniProfiler
                                {
                                    timing.Name,
                                    FormatTimings(timing.Children, timing.DurationMilliseconds.HasValue ? decimal.ToDouble(timing.DurationMilliseconds.Value) : (double?) null),
-                                   string.Format("{0} ms", parentDuration),
+                                   parentDuration.HasValue ? string.Format("{0} ms", parentDuration) : string.Empty,
                                    string.Format("T+{0} ms", timing.StartMilliseconds),
                                    FormatSqlTiming(timing.SqlTimings),
                                    string.Format("{0} ms", timing.SqlTimingsDurationMilliseconds)

@@ -1,14 +1,12 @@
 ﻿using System.Collections.Generic;
-using System.Web;
 using Glimpse.Core.Extensibility;
 using StackExchange.Profiling;
 
 namespace Glimpse.MiniProfiler
 {
-    [GlimpsePlugin()]
-    public class MiniProfilerPlugin : IGlimpsePlugin
+    public class MiniProfilerPlugin : TabBase
     {
-        public object GetData(HttpContextBase application)
+        public override object GetData(ITabContext application)
         {
             if (StackExchange.Profiling.MiniProfiler.Current == null)
             {
@@ -20,14 +18,9 @@ namespace Glimpse.MiniProfiler
             return FormatTimings(new[] {profiler.Root}, decimal.ToDouble(profiler.DurationMilliseconds));
         }
 
-        public void SetupInit()
+        public override string Name
         {
-            // Nothing
-        }
-
-        public string Name
-        {
-            get { return "Profiler"; }
+            get { return "MiniProfiler"; }
         }
 
         private List<object[]> FormatTimings(IEnumerable<Timing> timings, double? parentDuration)

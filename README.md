@@ -1,6 +1,15 @@
 MiniProfiler Glimpse Plugin
 ============================
 
+Important Notice
+----------------
+
+Miniprofiler v3.x introduced some changes that make the results unavailable when the request ends and the Glimpse data is collected so it can't work properly in future Miniprofiler versions.
+
+BTW, Miniprofiler and Glimpse features mostly overlap, so I'm not using this plugin anymore because I don't find it useful.
+
+If you know how to fix que Miniprofiler problems or find this plugin useful and want to add more features don't hesitate to make a pull request.
+
 Description
 -----------
 
